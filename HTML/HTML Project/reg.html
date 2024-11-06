@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showmessage(){
+            alert("registered!");
+        }
+    </script>
+</head>
+
+<style>
+.background{
+    background-color:rgb(118, 230, 192) ;
+    height:100vh ;
+    background-size: cover;
+    background-position: center;
+    /* border:4px solid pink; */
+    margin-right:60px ;
+    margin-left: 60px;
+}
+
+</style>
+
+
+<body>
+<div class="background">
+    
+<form style="text-align: center;"><br>
+<h1 style="color:black;">CLASS REGISTRATION</h1>
+<p>Fill Out The Form Carefully For Registration</p><br>
+<label>First Name:</label>
+<input type="text" placeholder="First Name" required><br><br>
+<label>Middle Name:</label>
+<input type="text" placeholder="Middle Name" required><br><br>
+<label>Last Name:</label>
+<input type="text" placeholder="Last Name" required><br><br>
+<label>Gender:</label>
+<select style="width:3cm;">
+    <option value="select">select</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+</select><br><br>
+<label>Course:</label>
+<select style="width:3cm;">
+    <option value="select">select</option>
+    <option value="science">science</option>
+    <option value="commerce">commerce</option>
+    <option value="humanities">humanities</option>
+</select><br><br>
+<label>Phone:</label>
+<select>
+    <option value="default">+91</option>
+</select>
+<input type="text" placeholder="Phone" required><br><br>
+<label>Address:</label><br>
+<input type="address" style="width: 300px; height:80px;" required><br><br>
+<label>Student Email:</label>
+<input type="email" style="width:6cm;" placeholder="@gmail.com" required><br><br>
+<button style="color:brown;" onclick="showmessage()" >Submit</button>
+<button style="color:brown;">Reset</button>
+
+</form>
+</div>
+</body>
+</html>

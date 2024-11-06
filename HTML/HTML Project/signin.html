@@ -1,0 +1,178 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  
+  <style>
+    .background{
+      background-image:url('044ff7294293bcb086feb3abaf2b6312.jpg');
+      height:100vh;
+      background-size:cover;
+      background-position:center;
+      border: 2px solid black;
+      margin-right: 50px;
+     margin-left: 60px;
+  
+    }
+    .border{
+      border:3px solid black;
+      margin-top:5cm;
+      margin-right:10cm;
+      margin-left:10cm;
+    }
+  </style>
+   -->
+  <!-- <body>
+
+    <div class="background">
+    <form class="border" style="text-align:center;">
+         <h1>Sign In</h1>
+         <label>Email:</label>
+         <input type="email" required><br></br>
+         <label>Password</label>
+         <input type="password" required><br></br>
+         <button><a href="reg.html">sign in</a></button><br>
+         <label style> Don't Have An Account?</label>
+         <a href="signup.html">Sign up</a>
+    </form> 
+    </div>
+
+</body>
+</html> -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>password validation</title>
+</head>
+<body>
+    <style>
+        .background {
+            background-image: url('044ff7294293bcb086feb3abaf2b6312.jpg');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid black; 
+            margin-bottom: 20%;
+            padding-right: 20%;
+        }
+        .border {
+            border: 2px solid white;
+            padding-left: 3cm; 
+            padding-bottom: 9px;
+            padding-right: 4px;
+            padding-top: 6px;
+            width: 10cm;
+            margin-top: 5cm;
+            margin-bottom: 10cm;
+            margin-left: 9cm;
+            margin-right: 4cm;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="signinForm" class="background"> 
+         <div class="border" style="text-align: center;">
+            <h1 style="text-align: center;">Sign In</h1><br><br>
+            <label><b>Email</b></label>
+            <input type="email" required><br><br>
+            <label><b>Password</b></label> 
+            <input type="password" id="password" name="password" required><br> 
+            <!-- Placeholder for validation error messages -->
+            <div id="passwordError" class="error-message"></div> 
+             <br><br> 
+            <button><a href="reg.html">sign in</a></button><br><br>
+            <label>Don't have an account?</label>
+            <a href="signup.html">Sign up</a><br><br>
+        </div>
+    </form>
+
+    
+     <!-- // JavaScript for password validation
+        document.getElementById('signinForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+           
+            // Regular expression to validate password
+            const passwordPattern = /^[A-Za-z0-9_!@#$%^&*()+=-]{8,}$/;
+
+            if (!passwordPattern.test(password)) {
+                passwordError.textContent = 'Password must be at least 8 characters long and include only letters, digits, underscores, or special characters (!@#$%^&*()+=-).';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                passwordError.textContent = ''; // Clear error message
+            } 
+        });  -->
+
+        <script>
+          function validatepassword(){
+            const passwordInput =document.getElementById("password");
+            const errorMessage = document.getElementById("errormessage");
+      
+            if(passwordInput.value.length <6){
+              errorMessage.innerText ="password must be at least 6 characters long.";
+              errorMessage.style.display ="block"
+      
+            }else{
+              errorMessage.style.display ="none"
+            }
+          }
+      
+          function togglepasswordvibility(){
+            const passwordInput =document.getElementById("password");
+            const togglepassword =document.getElementById("togglepassword");
+      
+            if(passwordInput.type ==="password"){
+              passwordInput.type = "text";
+              toggleIUcon.innerText ="🙈";
+      
+            }else{
+              passwordInput.type ="password";
+              toggleIcon.innerText ="👁"
+            }
+          }
+         
+               // JavaScript for password validation
+              document.getElementById('signinForm').addEventListener('submit', function(event) {
+                  const password = document.getElementById('password').value;
+                  const passwordError = document.getElementById('passwordError');
+                 
+                  // Regular expression to validate password
+                  const passwordPattern = /^[A-Za-z0-9_!@#$%^&*()+=-]{8,}$/;
+              if (!passwordPattern.test(password)) {
+                passwordError.textContent = 'Password must be at least 8 characters long and include only letters, digits, underscores, or special characters (!@#$%^&*()+=-).';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                passwordError.textContent = ''; // Clear error message
+            }
+        });
+        </script>
+      
+   </body>
+   </html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
